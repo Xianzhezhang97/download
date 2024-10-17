@@ -43,8 +43,7 @@ if [ -f "$output_file" ]; then
   git add .
   git commit -m "Update CV | Scott Update | $(date) | $(hostname)"
   git push
-  echo \n
-  echo "旧的 PDF 文件已重命名并移动到: $past_version_folder"
+  echo "\n旧的 PDF 文件已重命名并移动到: $past_version_folder"
   echo "转换成功，已更新到服务器! ===> $output_file"
 else
   echo "转换失败"
