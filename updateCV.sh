@@ -45,6 +45,7 @@ if [ -f "$output_file" ]; then
   git push
   echo
   echo "旧的 PDF 文件已重命名并移动到: $past_version_folder"
+  lp "$output_file"
   echo "转换成功，已更新到服务器! ===> $output_file"
 else
   echo "转换失败"
