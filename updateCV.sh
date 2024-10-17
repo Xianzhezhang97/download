@@ -24,11 +24,11 @@ EOF
 
 # 检查输出文件是否成功生成
 if [ -f "$output_file" ]; then
-  echo "转换成功: $output_file"
+  git add .
+  git commit -m "Update CV | Scott Update | $(date) | $(hostname)"
+  git push
+  echo "转换成功，已更新到服务器!\n $output_file"
 else
   echo "转换失败"
 fi
 
-git add .
-git commit -m "Update CV | Scott Update | $(date) | $(hostname)"
-git push
