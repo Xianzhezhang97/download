@@ -44,7 +44,7 @@ if [ -f "$output_file" ]; then
   # 使用 lp 命令虚拟打印 PDF
   echo
   echo "正在使用虚拟打印机打印 PDF 文件以解决病毒报错问题..."
-  lp -d "PDF" "$output_file"
+  lp -d "$output_file" "$output_file"
 
   # 提交到 git 仓库
   git add .
