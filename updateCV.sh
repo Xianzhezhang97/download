@@ -11,9 +11,9 @@ if [ ! -f "$input_file" ]; then
   exit 1
 fi
 
-# 如果存在旧的输出文件，将其重命名并移动到 past version 文件夹
+# 如果存在旧的输出文件，将其重命名并移动到past version文件夹
 if [ -f "$output_file" ]; then
-  # 创建 past version 文件夹（如果不存在）
+  # 创建past version文件夹（如果不存在）
   if [ ! -d "$past_version_folder" ]; then
     mkdir "$past_version_folder"
   fi
@@ -21,10 +21,9 @@ if [ -f "$output_file" ]; then
   # 获取当前日期，格式为 YYYY-MM-DD
   current_date=$(date +"%Y-%m-%d")
 
-  # 重命名旧的 PDF 文件，并移动到 past version 文件夹
+  # 重命名旧的PDF文件，并移动到past version文件夹
   mv "$output_file" "$past_version_folder/CV | ${current_date} | Scott Cheung.pdf"
-  echo
-  echo "旧的 PDF 文件已重命名并移动到: $past_version_folder"
+ 
 fi
 
 # 使用 AppleScript 将 pages 文件转为 pdf
@@ -41,17 +40,13 @@ EOF
 
 # 检查输出文件是否成功生成
 if [ -f "$output_file" ]; then
-  # 使用 lp 命令虚拟打印 PDF
-  echo
-  echo "正在使用虚拟打印机打印 PDF 文件以解决病毒报错问题..."
-  lp -d "PDF" "$output_file"
-
-  # 提交到 git 仓库
   git add .
   git commit -m "Update CV | Scott Update | $(date) | $(hostname)"
   git push
   echo
+  echo "旧的 PDF 文件已重命名并移动到: $past_version_folder"
   echo "转换成功，已更新到服务器! ===> $output_file"
 else
   echo "转换失败"
 fi
+
