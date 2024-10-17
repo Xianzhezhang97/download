@@ -27,7 +27,7 @@ if [ -f "$output_file" ]; then
   git add .
   git commit -m "Update CV | Scott Update | $(date) | $(hostname)"
   git push
-  echo "转换成功，已更新到服务器!\n $output_file"
+  echo "转换成功，已更新到服务器! ===> $output_file"
 else
   echo "转换失败"
 fi
