@@ -23,7 +23,7 @@ if [ -f "$output_file" ]; then
 
   # 重命名旧的PDF文件，并移动到past version文件夹
   mv "$output_file" "$past_version_folder/CV | ${current_date} | Scott Cheung.pdf"
-  echo "旧的 PDF 文件已重命名并移动到: $past_version_folder/CV | ${current_date} | Scott Cheung.pdf"
+ 
 fi
 
 # 使用 AppleScript 将 pages 文件转为 pdf
@@ -43,6 +43,8 @@ if [ -f "$output_file" ]; then
   git add .
   git commit -m "Update CV | Scott Update | $(date) | $(hostname)"
   git push
+  echo \n
+  echo "旧的 PDF 文件已重命名并移动到: $past_version_folder"
   echo "转换成功，已更新到服务器! ===> $output_file"
 else
   echo "转换失败"
