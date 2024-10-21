@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 指定输入和输出文件
-input_file="CV | Costom.pages"
+input_file="CV | Oringinal.pages"
 output_file="CV | Scott Cheung.pdf"
 past_version_folder="past version"
 
