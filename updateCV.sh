@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+cd '/Users/xianzhezhang/Desktop/Personal/Job Finding/src/CV'
 # 指定输入和输出文件
 input_file="CV | Oringinal.pages"
 output_file="CV | Scott Cheung.pdf"
@@ -116,3 +118,4 @@ else
   echo "转换失败"
 fi
 
+cd '/Users/xianzhezhang/Desktop/Personal/Job Finding/src'
