@@ -97,6 +97,9 @@ on run
         -- 关闭完整键盘访问 (Control + F7)
         key code 97 using control down
     end tell
+    tell application "Warp"
+        activate
+    end tell
 end run
 EOF
 
