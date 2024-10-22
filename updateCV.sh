@@ -51,11 +51,11 @@ on run
     
     tell application "Preview"
         open (POSIX file "$PWD/$output_file")
+        activate
         delay 1 -- 等待 Preview 完全打开文件
         
         -- 将 Preview 应用置于前台
-        activate
-        delay 2 -- 确保应用激活并准备接收输入
+        # delay 2 -- 确保应用激活并准备接收输入
         
         # tell application "System Events"
         #     -- 打开打印对话框 (Command + P)
