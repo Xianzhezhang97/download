@@ -57,35 +57,35 @@ on run
         activate
         delay 0.5 -- 确保应用激活并准备接收输入
         
-        tell application "System Events"
-            -- 打开打印对话框 (Command + P)
-            keystroke "p" using command down
-            delay 1 -- 等待打印对话框弹出
+        # tell application "System Events"
+        #     -- 打开打印对话框 (Command + P)
+        #     keystroke "p" using command down
+        #     delay 1 -- 等待打印对话框弹出
             
-            -- 按 2 次 Shift + Tab 键
-            repeat 2 times
-                key code 48 using shift down -- Shift + Tab
-                delay 0.2 -- 每次按键后的短暂延迟
-            end repeat
+        #     -- 按 2 次 Shift + Tab 键
+        #     repeat 2 times
+        #         key code 48 using shift down -- Shift + Tab
+        #         delay 0.2 -- 每次按键后的短暂延迟
+        #     end repeat
             
-            -- 空格键 1 次
-            keystroke space
-            delay 0.5 -- 等待对话框响应
+        #     -- 空格键 1 次
+        #     keystroke space
+        #     delay 0.5 -- 等待对话框响应
             
-            -- 按 Enter 确认保存 PDF
-            keystroke return
-            delay 0.5
+        #     -- 按 Enter 确认保存 PDF
+        #     keystroke return
+        #     delay 0.5
             
-            -- 按 Tab 1 次
-            keystroke tab
-            delay 0.5
+        #     -- 按 Tab 1 次
+        #     keystroke tab
+        #     delay 0.5
             
-            -- 空格键 1 次 (触发 PDF 保存)
-            keystroke space
+        #     -- 空格键 1 次 (触发 PDF 保存)
+        #     keystroke space
                
-            delay 0.5 -- 等待保存 PDF 完成
-            close front document
-        end tell
+        #     delay 0.5 -- 等待保存 PDF 完成
+        #     close front document
+        # end tell
         
         -- 关闭打开的 PDF 文件
         close front document
