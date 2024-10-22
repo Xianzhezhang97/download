@@ -55,7 +55,7 @@ on run
         
         -- 将 Preview 应用置于前台
         activate
-        delay 0.5 -- 确保应用激活并准备接收输入
+        delay 1 -- 确保应用激活并准备接收输入
         
         # tell application "System Events"
         #     -- 打开打印对话框 (Command + P)
