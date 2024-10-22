@@ -2,7 +2,9 @@
 
 
 cd '/Users/xianzhezhang/Desktop/Personal/Job Finding/src/CV'
-echo \n请稍等...正在调用 CV 脚本生成 CV PDF 文件...
+echo 请稍等...
+echo 正在调用 CV 脚本生成 PDF 文件...
+echo
 # 指定输入和输出文件
 input_file="CV | Oringinal.pages"
 output_file="CV | Scott Cheung.pdf"
