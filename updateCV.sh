@@ -83,10 +83,12 @@ on run
             -- 空格键 1 次 (触发 PDF 保存)
             keystroke space
             delay 1 -- 等待保存 PDF 完成
+            -- 关闭打开的 PDF 文件
+            close front document
         end tell
         
-        -- 关闭打开的 PDF 文件
-        close front document
+   
+        
     end tell
     
     tell application "System Events"
